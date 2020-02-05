@@ -1,6 +1,6 @@
 {% set name = "httptools" %}
-{% set version = "0.0.13" %}
-{% set sha256 = "e00cbd7ba01ff748e494248183abc6e153f49181169d8a3d41bb49132ca01dfc" %}
+{% set version = "0.1.0" %}
+{% set sha256 = "0680acab83b0699b770380b88a30e6da9a67aae56cece8559b5f7c6f26268f86" %}
 
 package:
   name: {{ name|lower }}
