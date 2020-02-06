@@ -28,6 +28,10 @@ requirements:
 test:
   imports:
     - httptools
+  requires:
+    - pip
+  commands:
+    - pip check
 
 about:
   home: https://github.com/MagicStack/httptools
