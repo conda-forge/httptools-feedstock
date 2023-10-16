@@ -1,6 +1,6 @@
 {% set name = "httptools" %}
-{% set version = "0.6.0" %}
-{% set sha256 = "9fc6e409ad38cbd68b177cd5158fc4042c796b82ca88d99ec78f07bed6c6b796" %}
+{% set version = "0.6.1" %}
+{% set sha256 = "c6e26c30455600b95d94b1b836085138e82f177351454ee841c148f93a9bad5a" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   skip: true  # [py2k]
 
