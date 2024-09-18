@@ -1,20 +1,26 @@
 {% set name = "httptools" %}
 {% set version = "0.6.1" %}
-{% set sha256 = "c6e26c30455600b95d94b1b836085138e82f177351454ee841c148f93a9bad5a" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  - url: https://github.com/MagicStack/httptools/archive/refs/tags/v{{ version }}.tar.gz
+    sha256: 20894c98b3fb19e498c520ec398f2c8f6967eee6ac56aa05b91edaca37c9e03d
+    patches:
+      - 101.patch
+  - url: https://github.com/nodejs/http-parser/archive/2343fd6b5214b2ded2cdcf76de2bf60903bb90cd.tar.gz
+    sah256: aaaa
+    folder: vendor/http-parser
+  - url: https://github.com/nodejs/llhttp/archive/caed04d6c1251e54c642bddfc7d0330af234f0d3.tar.gz
+    sha256: 63d807120603090ebc3778f49963c7ce6b7bf068dbd1529d4d66b83653b32e03
+    folder: vendor/llhttp
 
 build:
   number: 1
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
-  skip: true  # [py2k]
+  script: 
+    - {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
@@ -25,6 +31,8 @@ requirements:
   host:
     - python
     - pip
+    - setuptools
+    - cython
   run:
     - python
 
