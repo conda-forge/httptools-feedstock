@@ -1,5 +1,5 @@
 {% set name = "httptools" %}
-{% set version = "0.6.1" %}
+{% set version = "0.6.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   - url: https://github.com/MagicStack/httptools/archive/refs/tags/v{{ version }}.tar.gz
-    sha256: 20894c98b3fb19e498c520ec398f2c8f6967eee6ac56aa05b91edaca37c9e03d
+    sha256: c9c0408bed61d0fe84be28e0429e132f06c26313f1ee127223c942b9e2908409
     patches:
       - 101.patch
   - url: https://github.com/nodejs/http-parser/archive/2343fd6b5214b2ded2cdcf76de2bf60903bb90cd.tar.gz
@@ -18,8 +18,8 @@ source:
     folder: vendor/llhttp
 
 build:
-  number: 1
-  script: 
+  number: 0
+  script:
     - {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
