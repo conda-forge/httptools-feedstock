@@ -11,8 +11,8 @@ source:
   - url: https://github.com/nodejs/http-parser/archive/2343fd6b5214b2ded2cdcf76de2bf60903bb90cd.tar.gz
     sha256: 23c94c21959a94fcd71f7bfb161700d0e06541a7bd238f88d8819e6087fd2117
     folder: vendor/http-parser
-  - url: https://github.com/nodejs/llhttp/archive/caed04d6c1251e54c642bddfc7d0330af234f0d3.tar.gz
-    sha256: 63d807120603090ebc3778f49963c7ce6b7bf068dbd1529d4d66b83653b32e03
+  - url: https://github.com/nodejs/llhttp/archive/610a87d755f6bae466cd871c2ba97574ccac5483.tar.gz
+    sha256: fd0c4232a2cba3e741d0a14b02cfb9f1cf37869d7a318cc33373668a0fe1db28
     folder: vendor/llhttp
 
 build:
